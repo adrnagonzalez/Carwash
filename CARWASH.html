@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Adrian Gonzalez - Sculpting Realities - CARWASH</title>
+    <meta name="CARWASH" content="Sculpting Realities-CARWASH">
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+   
+
+  </head>
+
+  <body>
+
+    <a-scene>
+      
+      <a-assets timeout="10000">
+           <img id="wash" src="carwashtextures/wash.jpg">
+           <a-asset-item id="car" src="carwashtextures/car.obj"></a-asset-item>
+           <a-asset-item id="interior" src="carwashtextures/car.mtl"></a-asset-item>
+           <video  id="frontvideo" autoplay loop="true" src="carwashtextures/frontwash_2.mp4"></video>
+           <video id="rightvideo" autoplay loop="true" src="carwashtextures/rightwash.mp4"></video>
+           <video id="leftvideo" autoplay loop="true" src="carwashtextures/leftwash.mp4"></video>
+           <video id="backvideo" autoplay loop="true" src="carwashtextures/backwash.mp4"></video>
+      </a-assets>
+
+<a-obj-model id="model" src="#car" mtl="#interior" scale="1 1 1" rotation=" 0 180 0"></a-obj-model>
+
+<a-plane src="#frontvideo" height="35" width="78" position="-10 30 -36"rotation="50 0 0"></a-plane>
+
+<a-plane src="#rightvideo" height="29" width="110" position="33 26 7.9"rotation="0 270 0"></a-plane>
+
+<a-plane src="#leftvideo" height="35" width="110" position="-53 27.5 4.4"rotation="0 90 0"></a-plane>
+
+<a-plane src="#backvideo" height="25" width="80" position="-8 31.1 59"rotation="40 180 0"></a-plane>
+
+<a-plane src="#rightvideo" height="48" width="20" position="-9.5 43 1.4"rotation="90 270 0"></a-plane>
+
+  <a-camera id="camera" position="-24 30 -3" rotation="180 0 0"></a-camera>
+
+  <a-sky src="#wash"></a-sky>
+
+    </a-scene> 
+   
+  </body>
+</html>
+
+
+  
